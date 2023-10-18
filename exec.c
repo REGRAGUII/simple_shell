@@ -8,7 +8,7 @@ int _execute(char **command, char **argv)
     child = fork();
     if (child == 0)
     {
-        if (execve(command[0], command, env) == -1)
+        if (exexve(command[0], command, env) == -1)
         {
             perror(argv[0]);
             free2D(command);
