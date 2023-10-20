@@ -1,1 +1,1 @@
-Simple shell project not finished
+Simple shell project

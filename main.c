@@ -8,26 +8,10 @@
  */
 int main(int argc, char **argv)
 {
-    char *line = NULL;
-    char **command = NULL;
-    int status = 0;
-    (void) ac;
+	data d;
+	(void)argc;
+	init_data(&d, argv[0]);
+	_exec(&d);
 
-    while (1)
-    {
-        line = read_line();
-        if (line == NULL)
-        {
-            if (isatty(STDIN_FILENO))
-                write(STDOUT_FILENO, "\n", 1);
-            return (status);
-        }
-
-        command = tokenizer(line);
-        if (!command)
-            continue;
-
-
-        status = _execute(command, argv);
-    }
+	return (0);
 }
